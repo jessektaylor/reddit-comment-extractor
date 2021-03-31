@@ -245,8 +245,8 @@ class redditcommentliteralextraction():
                 oldestdate = redditlastcommentupdate[0][0]
                 for date in redditlastcommentupdate:
                     if date[0] < oldestdate:
-                        oldestdate = date
-                self.update_from_date = oldestdate[0]
+                        oldestdate = date[0]
+                self.update_from_date = oldestdate
                 
                 # self.update_from_date = datetime.datetime(self.update_from_date[0])
             else: # set to oldest date comment
