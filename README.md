@@ -5,10 +5,10 @@ In addition to collecting mentions of tickers in the comment, sentimental analys
 Subjectivity is measured [0,1] with 0 being objective and 1 being subjective. Objective is observation of measurable facts and subjective is personal opinions, assumptions, interpretations and beliefs.
 
 # ISSUES AND SOLUTIONS
-The database can be vary large so a generator is used to only process one days worth of comments at a time. 
-To prevent processing items multiple times and to preserve resources will attempt to load “redditlastcommentupdate” from the database. This is a datetime to process from till current
-Special characters and emojis are removed from the text ['$','.','"',"'","!","?","*","/",'(',')'] before processing ticker search.
-Sentimental analysis is done before removing the special characters since the package uses some of these to calculate the sentiment. 
+- The database can be vary large so a generator is used to only process one days worth of comments at a time. 
+- To prevent processing items multiple times and to preserve resources will attempt to load “redditlastcommentupdate” from the database. This is a datetime to process from till current
+- Tickers not detected because surrouding values. Special characters and emojis are removed from the text ['$','.','"',"'","!","?","*","/",'(',')'] before processing ticker search.
+- Sentimental analysis is done before removing the special characters since the package uses some of these to calculate the sentiment. 
 
 # REQUIRED ENVIRONMENT VARIABLES 
 - postgreshost=24.224.224.224
